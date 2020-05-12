@@ -1,0 +1,42 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="/css/pico.min.css" rel="stylesheet" />
+    <link href="/css/icss.css" rel="stylesheet">
+    <link href="/css/icons.css" rel="stylesheet">
+    {{ template "stylesheets" . }}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ template "css" . }}
+    <title>Hello Go!</title>
+  </head>
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Hello</strong>Go!</li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/prologic/go-picocss">Github</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <section>
+      {{template "content" .}}
+    </section>
+  </main>
+  <footer>
+    <p>Created by <a att href="https://github.com/prologic" target="_blank">James Mills</a></p>
+    <p>
+      <a att href="httpss://github.com/prologic/go-picocss" target="_blank">
+        <i class="icss-github-c"></i>
+      </a>
+    </p>
+  </footer>
+</body>
+<script src="https://cdn.rawgit.com/Kimeiga/bahunya/26313661/prism.js"></script>
+{{ template "scripts" . }}
+</html>
+{{end}}
+{{ define "css" }}{{ end }}
+{{ define "scripts" }}{{ end }}
+{{ define "stylesheets" }}{{ end }}
