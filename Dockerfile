@@ -2,11 +2,11 @@
 FROM golang:alpine AS build
 
 RUN apk add --no-cache -U git make build-base
-
+Dockerfile
 RUN go get github.com/GeertJohan/go.rice/rice
 
-WORKDIR /src/go-pincnic-umbrella
-COPY . /src/go-pincnic-umbrella
+WORKDIR /src/go-picocss
+COPY . /src/go-picocss
 
 RUN make install
 
